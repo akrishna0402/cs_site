@@ -1,14 +1,14 @@
 import React from "react";
 
-const Card = ({ heading, data, className }) => {
+const Card = ({ date, notice, className }) => {
 	return (
 		<div
-			className={`relative rounded-2xl px-3 py-2 border w-[80%] ml-[10%] my-2 border-black ${className}`}
+			className={`flex flex-col md:flex-row items-start md:items-center justify-start rounded-xl py-1 px-2 md:px-3 md:py-2 border w-[80%] ml-[10%] my-2 navItemBg ${className}`}
 		>
-			<div className="absolute top-0 left-0 bg-gray-200 rounded-tl-2xl p-1">
-				20/11/2022
+			<div className=" bg-[#4489ffed] text-white rounded-md p-1 my-2 md:mr-2 md:my-0 text-sm navItemBg">
+				{date}
 			</div>
-			<p className="mt-4 text-xl text-center">Notice</p>
+			<p className="text-md  md:text-center ml-2">{notice}</p>
 		</div>
 	);
 };

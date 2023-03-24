@@ -1,0 +1,123 @@
+export const projectsData = [
+	{
+		"Sl No": 1,
+		Title:
+			"Integrating In-Silico and Wet Lab to Identify NovelPhytochemicals for Cancer Therapy",
+		"Name of the PI": "Dr. Monalisa Mandal",
+		"Name of the CoPIs": "Dr. Sanjeeb Kumar Sahoo",
+		"Funding Agency":
+			"Science and Engineering Research Board and Department of Science and Technology",
+		"Amount (Rs.)": 1950000,
+		"Project Status": "Completed",
+		"Date of Initiation": "26/11/2018",
+		"Date of Completion": "25/11/2021",
+	},
+	{
+		"Sl No": 2,
+		Title:
+			"Automatic Question Generation and Evaluation Based System for Instant Assessment of Learning in School Level.",
+		"Name of the PI": "Sujan Kumar Saha",
+		"Name of the CoPIs": "NIL",
+		"Funding Agency": "SERB",
+		"Amount (Rs.)": 1961400,
+		"Project Status": "Completed",
+		"Date of Initiation": "2016-05-02",
+		"Date of Completion": "2019-05-01",
+	},
+	{
+		"Sl No": 3,
+		Title:
+			"Development of Basic Natural Language Processing Tools and Resources for Maithili",
+		"Name of the PI": "Sujan Kumar Saha",
+		"Name of the CoPIs": "NIL",
+		"Funding Agency": "SERB",
+		"Amount (Rs.)": 1798000,
+		"Project Status": "Completed",
+		"Date of Initiation": "2017-03-15",
+		"Date of Completion": "2020-03-14",
+	},
+	{
+		"Sl No": 4,
+		Title:
+			"System for Automatic Evaluation of Handwritten Answer Books in Bengali",
+		"Name of the PI": "Sujan Kumar Saha",
+		"Name of the CoPIs": "NIL",
+		"Funding Agency": "SERB",
+		"Amount (Rs.)": 2001190,
+		"Project Status": "Ongoing",
+		"Date of Initiation": "2022-03-19",
+		"Date of Completion": "",
+	},
+	{
+		"Sl No": 5,
+		Title:
+			"Automatic Speech Recognition System in Santali and Nagpuri Languages: Resource Creation and System Development",
+		"Name of the PI": "Sujan Kumar Saha",
+		"Name of the CoPIs": "NIL",
+		"Funding Agency": "SERB",
+		"Amount (Rs.)": 2961112,
+		"Project Status": "Ongoing",
+		"Date of Initiation": "2022-03-03",
+		"Date of Completion": "",
+	},
+	{
+		"Sl No": 6,
+		Title:
+			"QoE Optimized Multimedia Content Delivery through Caching in D2D underlay Networks",
+		"Name of the PI": "Suvadip Batabyal",
+		"Name of the CoPIs": "NA",
+		"Funding Agency": "SERB (Core Research Grant)",
+		"Amount (Rs.)": 2159696,
+		"Project Status": "Ongoing",
+		"Date of Initiation": "2021-08-18",
+		"Date of Completion": "",
+	},
+	{
+		"Sl No": 7,
+		Title:
+			"Artificial Intelligence (AI) in Education Focus: Children with Learning Disability",
+		"Name of the PI": "Prof. T. Pal",
+		"Name of the CoPIs":
+			"Prof. Anupam Basu, Prof. Chiranjib Koley, Dr. Suman Halder, Dr. Tushar Kanti Bera, Dr. Mamata Dalui, Dr. Parag Kumar Guha Thakurta",
+		"Funding Agency": "MeitY",
+		"Amount (Rs.)": 8137000,
+		"Project Status": "Ongoing",
+		"Date of Initiation": "",
+		"Date of Completion": "",
+	},
+	{
+		"Sl No": 8,
+		Title: "Information Security Education and Awareness Project (Phase-II)",
+		"Name of the PI": "Jaydeep Howlader (Chief Investigator)",
+		"Name of the CoPIs": "",
+		"Funding Agency": "MietY, Govt. of INDIA",
+		"Amount (Rs.)": 3606000,
+		"Project Status": "Ongoing",
+		"Date of Initiation": "",
+		"Date of Completion": "",
+	},
+	{
+		"Sl No": 9,
+		Title:
+			"Cognitive load assessment methods for the blind, in adaptation to new assistive technologies",
+		"Name of the PI": "Bibhash Sen",
+		"Name of the CoPIs":
+			"Anupam Basu, Dakshina Ranjan Kisku Tandra Pal Tushar Kanti Bera",
+		"Funding Agency": "TCS Mumbai",
+		"Amount (Rs.)": 2992000,
+		"Project Status": "Ongoing",
+		"Date of Initiation": "2021-09-01",
+		"Date of Completion": "2023-04-02",
+	},
+	{
+		"Sl No": 10,
+		Title: "Assistive Technology on multimodal disabilities",
+		"Name of the PI": "Nilanjan Chattaraj",
+		"Name of the CoPIs": "Dr. Sujoy Saha, Dr. Mousumi Saha",
+		"Funding Agency": "TCS",
+		"Amount (Rs.)": 30,
+		"Project Status": "Ongoing",
+		"Date of Initiation": "2022-02-01",
+		"Date of Completion": "2024-02-01",
+	},
+];

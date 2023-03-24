@@ -3,12 +3,14 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	const activeStyle = {
-		backgroundColor: "black",
 		borderRadius: "100%",
 		width: "100%",
+		background: "#4489ffde",
+		color: "white",
+		boxShadow: "24px 24px 54px #4077b6,-24px -24px 54px #60b3ff",
 	};
 	return (
-		<div className="rounded-full sticky mt-5 mx-4 flex text-white items-center justify-evenly bg-blue-400">
+		<div className="rounded-full sticky mt-5 mx-4 flex text-black items-center justify-evenly navBG">
 			<nav className="w-full">
 				<ul className="w-full flex justify-evenly items-center rounded-full">
 					<li className="w-full">
@@ -29,10 +31,10 @@ const Navbar = () => {
 					</li>
 					<li className="w-full">
 						<NavLink
-							to="/faculty"
+							to="/people/faculty"
 							style={({ isActive }) => (isActive ? activeStyle : undefined)}
 						>
-							<div className="navItem">Faculty</div>
+							<div className="navItem">People</div>
 						</NavLink>
 					</li>
 					<li className="w-full">
@@ -61,7 +63,7 @@ const Navbar = () => {
 					</li>
 					<li className="w-full">
 						<NavLink
-							to="/events"
+							to="/events/upcoming"
 							style={({ isActive }) => (isActive ? activeStyle : undefined)}
 						>
 							<div className="navItem">Events</div>

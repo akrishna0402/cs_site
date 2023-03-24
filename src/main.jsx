@@ -2,9 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import App from "./App";
-import Home from "./routes/Home.jsx";
 import "./index.css";
-import Contact from "./routes/Contact";
+import {
+	Contact,
+	Events,
+	Research,
+	Programmes,
+	Projects,
+	Home,
+	Alumini,
+	People,
+} from "./routes/index";
+import SemTable from "./components/SemTable";
+import Faculty from "./components/Faculty";
+import ProgrammeNotice from "./components/ProgrammeNotice";
+import EventData from "./components/EventData"
 
 const router = createBrowserRouter([
 	{
@@ -18,6 +30,72 @@ const router = createBrowserRouter([
 			{
 				path: "/contact",
 				element: <Contact />,
+			},
+			{
+				path: "/programmes",
+				element: <Programmes />,
+				children: [
+					{
+						path: "ug/:ugId",
+						element: <SemTable />,
+					},
+					{
+						path: "pg",
+						element: <ProgrammeNotice />,
+					},
+					{
+						path: "phd",
+						element: <ProgrammeNotice />,
+					},
+				],
+			},
+			{
+				path: "/people",
+				element: <People />,
+				children: [
+					{
+						path: "faculty",
+						element: <Faculty />,
+					},
+					{
+						path: "staff",
+						element: <Faculty />,
+					},
+					{
+						path: "student",
+						element: <Faculty />,
+					},
+				],
+			},
+			{
+				path: "/research",
+				element: <Research />,
+			},
+			{
+				path: "/projects",
+				element: <Projects />,
+			},
+			{
+				path: "/alumini",
+				element: <Alumini />,
+			},
+			{
+				path: "/events",
+				element: <Events />,
+				children: [
+					{
+						path: "upcoming",
+						element: <EventData />,
+					},
+					{
+						path: "past",
+						element: <EventData />,
+					},
+					{
+						path: "talks",
+						element: <EventData />,
+					},
+				],
 			},
 		],
 	},
