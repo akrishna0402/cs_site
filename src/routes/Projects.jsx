@@ -6,7 +6,7 @@ const Projects = () => {
 		<div className="mx-5 my-4 flex flex-col items-start justify-between pb-10 overflow-scroll md:overflow-hidden">
 			<h1 className="text-2xl mb-4 font-bold">Sponsored Projects</h1>
 			<table className="border my-4 border-black w-full text-center">
-				<thead className="p-2 font-bold text-white bg-[#4489ffed]">
+				<thead className="p-2 font-bold text-white bg-[#021333]">
 					{Object.keys(projectsData[0]).map((p) => {
 						return <td>{p}</td>;
 					})}

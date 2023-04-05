@@ -7,7 +7,7 @@ const Research = () => {
 				Collaboration with Academic and Research Institutions in recent times
 			</h1>
 			<table className="border my-4 border-black w-full text-center">
-				<thead className="p-2 font-bold text-white bg-[#4489ffed]">
+				<thead className="p-2 font-bold text-white bg-[#021333]">
 					{Object.keys(researchData[0]).map((h) => {
 						return <td>{h}</td>;
 					})}

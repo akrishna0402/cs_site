@@ -8,7 +8,7 @@ const SemTable = () => {
 	return (
 		<div>
 			<table className="border border-black w-full text-center">
-				<thead className="p-2 font-bold text-white bg-[#4489ffed]">
+				<thead className="p-2 font-bold text-white bg-[#021333]">
 					<td>COURSE TITLE</td>
 					<td>CODE</td>
 					<td>L</td>

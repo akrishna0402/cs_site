@@ -34,20 +34,20 @@ const Home = () => {
 	const photos_settings = {
 		initialSlide: 3,
 		rows: 1,
-		slidesToShow: !isMobile ? 2 : 1,
+		slidesToShow: 1,
 	};
 
 	return (
 		<div className="mb-4 p-3 flex gap-2 flex-col md:flex-row flex-wrap items-stretch justify-stretch pb-10">
 			<div className={`card  ${width > 1000 ? "basis-[60%]" : "basis-full"}`}>
-				<Slider className="my-2 min-h-[200px]" {...photos_settings}>
+			<h1 className="text-xl md:text-2xl -mb-1 text-center font-bold">
+					Gallery
+				</h1>
+				<Slider className="mt-2 max-h-[300px]" {...photos_settings}>
 					{galleryData.map((i) => {
-						return <img className="p-2" src={i.imgUrl} key={i.id} />;
+						return <img className="p-2 max-h-[300px]" src={i.imgUrl} key={i.id} />;
 					})}
 				</Slider>
-				<h1 className="text-xl md:text-2xl -mb-1 text-center font-bold">
-					Photo Gallery
-				</h1>
 			</div>
 			<div className={`card ${width >= 1024 ? "basis-[39%]" : "basis-[48%]"}`}>
 				<h2 className="font-bold text-xl md:text-2xl text-center">News Feed</h2>
@@ -57,7 +57,7 @@ const Home = () => {
 					})}
 				</Slider>
 			</div>
-			<div className={`card ${width > 1024 ? "basis-[32%]" : "basis-[50%]"}`}>
+			<div className={`card ${width > 1024 ? "basis-[50%]" : "basis-[50%]"}`}>
 				<h2 className="font-bold text-2xl text-center">About Us</h2>
 				<p className="mt-4">
 					The Department started imparting instructions with the most modern
@@ -82,7 +82,7 @@ const Home = () => {
 					researchers have made a foray.
 				</p>
 			</div>
-			<div className={`card ${width > 1024 ? "basis-[32%]" : "basis-[49%]"}`}>
+			<div className={`card ${width > 1024 ? "basis-[49%]" : "basis-[49%]"}`}>
 				<h2 className="font-bold text-xl md:text-2xl text-center">
 					Mission & Vision
 				</h2>
@@ -120,7 +120,7 @@ const Home = () => {
 						: "basis-[33%] flex-col justify-between"
 				}`}
 			>
-				<div className="card w-full h-full">
+				{/* <div className="card w-full h-full">
 					<h2 className="font-bold text-xl md:text-2xl text-center">
 						Live Events
 					</h2>
@@ -142,10 +142,10 @@ const Home = () => {
 							No Current Live Events
 						</div>
 					)}
-				</div>
-				<div className="w-full">
+				</div> */}
+				{/* <div className="w-full">
 					<HODCard />
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

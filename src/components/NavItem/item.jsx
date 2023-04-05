@@ -5,8 +5,8 @@ import NavItemHeader from "./index.jsx";
 const NavItem = (props) => {
 	const activeClassname = {
 		color: "white",
-		backgroundColor: "#4489FFDE",
-		padding: "10px",
+		backgroundColor: "#021333",
+		
 		borderRadius: "10px"
 	};
 	const { name, to, children } = props.item;
@@ -16,15 +16,18 @@ const NavItem = (props) => {
 	}
 
 	return (
-		<div className={`w-full h-full p-3 rounded-xl ${props.className}`}>
+		
 			<NavLink
 				style={({ isActive }) => (isActive ? activeClassname : undefined)}
+				className={`w-full`}
 				to={to}
 				exact="true"
 			>
+				<div className={`w-full h-full p-3 rounded-xl ${props.className}`}>
 				{name}
+				</div>
 			</NavLink>
-		</div>
+		
 	);
 };
 

@@ -5,7 +5,7 @@ const Navbar = () => {
 	const activeStyle = {
 		borderRadius: "100%",
 		width: "100%",
-		background: "#4489ffde",
+		background: "#021333",
 		color: "white",
 		boxShadow: "24px 24px 54px #4077b6,-24px -24px 54px #60b3ff",
 	};
@@ -51,14 +51,6 @@ const Navbar = () => {
 							style={({ isActive }) => (isActive ? activeStyle : undefined)}
 						>
 							<div className="navItem">Projects</div>
-						</NavLink>
-					</li>
-					<li className="w-full">
-						<NavLink
-							to="/alumini"
-							style={({ isActive }) => (isActive ? activeStyle : undefined)}
-						>
-							<div className="navItem">Alumini</div>
 						</NavLink>
 					</li>
 					<li className="w-full">

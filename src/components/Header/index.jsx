@@ -11,7 +11,7 @@ const Header = () => {
 		padding: "10px",
 		borderRadius: "20px",
 		color: "white",
-		background: "black",
+		background: "#021333",
 	};
 
 	const handleClick = () => {
@@ -63,14 +63,6 @@ const Header = () => {
 				</li>
 				<li className="w-full">
 					<NavLink
-						to="/alumini"
-						style={({ isActive }) => (isActive ? activeStyle : undefined)}
-					>
-						Alumini
-					</NavLink>
-				</li>
-				<li className="w-full">
-					<NavLink
 						to="/events"
 						style={({ isActive }) => (isActive ? activeStyle : undefined)}
 					>
@@ -90,7 +82,7 @@ const Header = () => {
 	);
 
 	return (
-		<div className="px-4 py-2 flex flex-col md:flex-row justify-between items-center w-full bg-[#4489ff]  text-white">
+		<div className="px-4 py-2 flex flex-col md:flex-row justify-between items-center w-full bg-[#021333]  text-white">
 			<div className="flex w-full items-center gap-4">
 				<img
 					src="https://nitdgp.ac.in/front/assets/images/logo.png"
