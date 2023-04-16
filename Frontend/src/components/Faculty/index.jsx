@@ -19,11 +19,11 @@ const Faculty = () => {
     const loadData = async () => {
       let d;
       if (facultyType === "staff") {
-        d = await fetch("http://127.0.0.1:8000/api/staff/").then(
+        d = await fetch("https://omprakash1.pythonanywhere.com/api/staff/").then(
           (res) => res.json()
         );
       } else {
-        d = await fetch("http://127.0.0.1:8000/api/faculty/").then(
+        d = await fetch("https://omprakash1.pythonanywhere.com/api/faculty/").then(
           (res) => res.json()
         );
       }

@@ -23,12 +23,12 @@ const Home = () => {
 
   useEffect(() => {
     const load = async () => {
-      const r = await fetch("http://127.0.0.1:8000/api/gallery/").then((res) =>
+      const r = await fetch("https://omprakash1.pythonanywhere.com/api/gallery/").then((res) =>
         res.json()
       );
       setGalleryData(r);
 
-      const feed = await fetch("http://127.0.0.1:8000/api/feed/").then((res) =>
+      const feed = await fetch("https://omprakash1.pythonanywhere.com/api/feed/").then((res) =>
         res.json()
       );
       setFeed(feed);

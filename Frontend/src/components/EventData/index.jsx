@@ -12,7 +12,7 @@ const EventData = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      let d = await fetch("http://127.0.0.1:8000/api/events/").then((res) =>
+      let d = await fetch("https://omprakash1.pythonanywhere.com/api/events/").then((res) =>
         res.json()
       );
       if (location === "upcoming") {
