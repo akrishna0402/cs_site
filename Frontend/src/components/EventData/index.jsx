@@ -20,7 +20,6 @@ const EventData = () => {
       } else {
         d = d.filter(k => k.EventType === "past");
       }
-      console.log(d);
       setData(d);
       setLoader(true);
     };

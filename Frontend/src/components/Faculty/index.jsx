@@ -19,19 +19,29 @@ const Faculty = () => {
     const loadData = async () => {
       let d;
       if (facultyType === "staff") {
-        d = await fetch("https://omprakash1.pythonanywhere.com/api/staff/").then(
-          (res) => res.json()
-        );
+        d = await fetch(
+          "https://omprakash1.pythonanywhere.com/api/staff/"
+        ).then((res) => res.json());
+      } else if (facultyType === "faculty") {
+        d = await fetch(
+          "https://omprakash1.pythonanywhere.com/api/faculty/"
+        ).then((res) => res.json());
       } else {
-        d = await fetch("https://omprakash1.pythonanywhere.com/api/faculty/").then(
-          (res) => res.json()
-        );
+        if (pathname.split("/")[3] === "ug") {
+          d = await fetch(
+            "https://omprakash1.pythonanywhere.com/api/faculty/"
+          ).then((res) => res.json());
+        } else {
+          d = await fetch(
+            "https://omprakash1.pythonanywhere.com/api/staff/"
+          ).then((res) => res.json());
+        }
       }
       setData(d);
       setLoader(true);
     };
     loadData();
-  });
+  } , [pathname]);
 
   return loader ? (
     <div className="flex flex-wrap gap-2 items-center justify-start">
@@ -42,8 +52,8 @@ const Faculty = () => {
             name={d.name}
             designation={d.post}
             image={d.image}
-            contact={{email : d.email , phone : d.phoneno}}
-            expertise={[d.interest_area_1 , d.interest_area_2]}
+            contact={{ email: d.email, phone: d.phoneno }}
+            expertise={[d.interest_area_1, d.interest_area_2]}
             joinYear={d.joined_year}
           />
         );

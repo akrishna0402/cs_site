@@ -7,7 +7,19 @@ export const facultyData = [
 		name: "Staff",
 		to: "/people/staff",
 	},
-	
+	{
+		name: "Student",
+		children : [
+			{
+				name : "UG",
+				to: "/people/student/ug",
+			},
+			{
+				name : "PG",
+				to: "/people/student/pg",
+			}
+		]
+	}
 ];
 
 export const facultyDetails = [

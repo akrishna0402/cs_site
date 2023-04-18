@@ -8,14 +8,14 @@ const Research = () => {
 			</h1>
 			<table className="border my-4 border-black w-full text-center">
 				<thead className="p-2 font-bold text-white bg-[#021333]">
-					{Object.keys(researchData[0]).map((h) => {
-						return <td>{h}</td>;
+					{Object.keys(researchData[0]).map((h , i) => {
+						return <th key={i} >{h}</th>;
 					})}
 				</thead>
 				<tbody>
-					{researchData.map((res) => {
+					{researchData.map((res , i) => {
 						return (
-							<tr>
+							<tr key={i}>
 								<td>{res["Collaborating Institute / Organization"]}</td>
 								<td>{res["Areas of Collaboration"]}</td>
 								<td>{res["Faculty Members Involved"]}</td>

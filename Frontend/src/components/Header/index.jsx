@@ -97,13 +97,13 @@ const Header = () => {
 					Computer Science and Enginnering
 				</span>
 				{width < 768 && (
-					<buttom
+					<button
 						onClick={handleClick}
 						className="flex items-center justify-center border rounded-md gap-2 border-white p-1"
 					>
 						<FiMenu />
 						<span>Menu</span>
-					</buttom>
+					</button>
 				)}
 			</div>
 			{active && mobileNav}
