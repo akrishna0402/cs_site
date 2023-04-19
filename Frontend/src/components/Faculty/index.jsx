@@ -29,35 +29,51 @@ const Faculty = () => {
       } else {
         if (pathname.split("/")[3] === "ug") {
           d = await fetch(
-            "https://omprakash1.pythonanywhere.com/api/faculty/"
+            "https://omprakash1.pythonanywhere.com/api/student/"
           ).then((res) => res.json());
+          d = d.filter((k) => k.type === "UG");
         } else {
           d = await fetch(
-            "https://omprakash1.pythonanywhere.com/api/staff/"
+            "https://omprakash1.pythonanywhere.com/api/student/"
           ).then((res) => res.json());
+          d = d.filter((k) => k.type === "PG");
         }
       }
+      console.log(d);
       setData(d);
       setLoader(true);
     };
     loadData();
-  } , [pathname]);
+  }, [pathname]);
 
   return loader ? (
     <div className="flex flex-wrap gap-2 items-center justify-start">
-      {data.map((d) => {
-        return (
-          <FacultyCard
-            key={d.id}
-            name={d.name}
-            designation={d.post}
-            image={d.image}
-            contact={{ email: d.email, phone: d.phoneno }}
-            expertise={[d.interest_area_1, d.interest_area_2]}
-            joinYear={d.joined_year}
-          />
-        );
-      })}
+      {facultyType === "faculty"
+        ? data.map((d) => {
+            return (
+              <FacultyCard
+                key={d.id}
+                name={d.name}
+                designation={d.post}
+                image={d.image}
+                contact={{ email: d.email, phone: d.phoneno }}
+                expertise={[d.interest_area_1, d.interest_area_2]}
+                joinYear={d.joined_year}
+              />
+            );
+          })
+        : data.map((d) => {
+            return (
+              <FacultyCard
+                key={d.id}
+                name={d.name}
+                designation={d.post}
+                image={d.image}
+                contact={{ email: d.email, phone: d.phoneno }}
+                joinYear={d.joined_year}
+              />
+            );
+          })}
     </div>
   ) : null;
 };
