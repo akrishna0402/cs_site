@@ -26,6 +26,23 @@ class Staff(models.Model):
   def __str__(self):
          return self.name
 
+class Student(models.Model):
+  TYPE = [
+        ('UG', 'UG'),
+        ('PG', 'PG'),  
+    ]
+  name = models.CharField(max_length=100)
+  image=models.ImageField(upload_to='images/staff')
+  type = models.CharField(max_length=20, choices=TYPE)
+  email = models.EmailField(unique=True)
+  phoneno=models.IntegerField(default=0)
+  post = models.CharField(max_length=100)
+  interest_area_1 = models.CharField(max_length=100)
+  interest_area_2 = models.CharField(max_length=100)
+  joined_year = models.IntegerField(default=0)
+  def __str__(self):
+         return self.name
+
 class Feed(models.Model):
   name = models.CharField(max_length=100)
   link = models.CharField(max_length=5000,blank=True,default=" ")

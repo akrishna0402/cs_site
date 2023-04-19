@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Faculty, Staff, Event, gallery , Feed
+from .models import Faculty, Staff, Event, gallery , Feed , Student
 
 class FacultySerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,6 +10,11 @@ class StaffSerializer(serializers.ModelSerializer):
     class Meta:
         model = Staff
         fields = ['id', 'name', 'image', 'email', 'phoneno', 'post', 'interest_area_1', 'interest_area_2', 'joined_year']
+
+class StudentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Student
+        fields = ['id', 'name', 'image','type', 'email', 'phoneno', 'post', 'interest_area_1', 'interest_area_2', 'joined_year']
 
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
