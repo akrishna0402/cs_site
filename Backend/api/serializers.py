@@ -14,7 +14,7 @@ class StaffSerializer(serializers.ModelSerializer):
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ['id', 'name', 'image', 'email', 'phoneno', 'post', 'interest_area_1', 'interest_area_2', 'joined_year']
+        fields = ['id', 'name', 'image','type', 'email', 'phoneno', 'post', 'interest_area_1', 'interest_area_2', 'joined_year']
 
 class EventSerializer(serializers.ModelSerializer):
     class Meta:

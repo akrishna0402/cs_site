@@ -27,8 +27,13 @@ class Staff(models.Model):
          return self.name
 
 class Student(models.Model):
+  TYPE = [
+        ('UG', 'UG'),
+        ('PG', 'PG'),  
+    ]
   name = models.CharField(max_length=100)
   image=models.ImageField(upload_to='images/staff')
+  type = models.CharField(max_length=20, choices=TYPE)
   email = models.EmailField(unique=True)
   phoneno=models.IntegerField(default=0)
   post = models.CharField(max_length=100)
